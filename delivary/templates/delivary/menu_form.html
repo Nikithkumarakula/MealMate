@@ -1,0 +1,22 @@
+{% extends "delivary/base.html" %} 
+
+{% load static %} 
+
+{% block content %}
+<!-- Linking the external CSS file -->
+<link rel="stylesheet" type="text/css" href="{% static 'delivary/css/menuform.css' %}">
+
+<div class="form-container">
+    <h2>Add Menu Item</h2>
+
+    <form method="POST" class="menu-form">
+        {% csrf_token %}
+
+        <div class="form-fields">
+            {{ form.as_p }}
+        </div>
+        <button type="submit" class="submit-btn">Submit</button>
+    </form>
+</div>
+
+{% endblock %}

@@ -1,0 +1,9 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'delivary/css/style.css' %}">
+<link rel="stylesheet" href="{% static 'delivary/css/index.css' %}">
+
+
+<h1>Welcome to MealMate</h1>
+<br></br>
+<a href="{% url 'delivary:sign_up' %}">Sign_up</a>
+<a href="{% url 'delivary:sign_in' %}">Sign_in</a>

@@ -1,0 +1,129 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: url("https://t4.ftcdn.net/jpg/02/92/20/37/240_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg") no-repeat center center/cover;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav h2 {
+    color: white;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #777;
+}
+
+/* Total Price Styling with Background Box */
+.total-price {
+    font-size: 36px;
+    color: #fff; /* White text for contrast */
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-align: center;
+    text-transform: uppercase;
+    background: linear-gradient(45deg, #d3aca8, #bc7f72); /* Gradient background */
+    padding: 15px 20px;
+    border-radius: 10px; /* Rounded corners */
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow */
+}
+
+
+/* Welcome Text */
+h2 {
+    font-size: 26px;
+    color: #e64a19; /* Teal Green */
+    margin-bottom: 25px;
+    font-weight: 600;
+}
+
+
+/* Error Message */
+p {
+    font-size: 18px;
+    color: red;
+}
+
+/* Table Styling */
+table {
+    width: 50%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+th, td {
+    padding: 12px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #528FF0;
+    color: white;
+    font-size: 18px;
+}
+
+td {
+    font-size: 16px;
+}
+
+/* Total Price */
+h3 {
+    font-size: 22px;
+    color: #222;
+    margin-top: 15px;
+}
+
+/* Payment Button */
+#rzp-button {
+    background-color: #ff5733;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#rzp-button:hover {
+    background-color: #e64a19;
+}

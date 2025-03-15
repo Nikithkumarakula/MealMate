@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Food Delivery - Cart</title>
+    <link rel="stylesheet" href="{% static '/delivary/css/showcart.css' %}" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav>
+      <h2>
+        <a href="{% url 'delivary:index' %}" style="text-decoration: none; color: white;">MealMate</a>
+    </h2>
+
+      <div class="nav-links">
+        <a href="{% url 'delivary:cusdisplay_res' username %}">View Restaurants</a>
+        <a href="{% url 'delivary:sign_in' %}">Sign In</a>
+        <a href="{% url 'delivary:sign_up' %}">Sign Up</a>
+      </div>
+    </nav>
+
+    <!-- Cart Section -->
+    <div class="cart-container">
+      <h3>Your Cart</h3>
+      {% if items %}
+      <ul>
+        {% for item in items %}
+        <li>{{ item.item_name }} - ₹{{ item.price }}</li>
+        {% endfor %}
+      </ul>
+      <p><strong>Total Price:</strong> ₹{{ total_price }}</p>
+
+      <!-- Checkout Button -->
+      <a href="{% url 'delivary:checkout' username %}" class="checkout-btn">
+        Proceed to Checkout
+      </a>
+      {% else %}
+      <p>Your cart is empty.</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

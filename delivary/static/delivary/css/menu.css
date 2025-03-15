@@ -1,0 +1,180 @@
+/* ===== General Page Styling ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://t4.ftcdn.net/jpg/02/92/20/37/240_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg") no-repeat center center/cover;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Navbar Styling */
+nav {
+    background-color: #333;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav h2 {
+    color: white;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #777;
+}
+
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 10px;
+    }
+}
+
+/* ===== Container Styling ===== */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* ===== Title & Paragraph Styling ===== */
+h2 {
+    color: #FF5733;
+    font-size: 26px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+    margin: 5px 0;
+}
+
+/* ===== Table Styling ===== */
+.table-container {
+    margin-top: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ===== Table Header Styling ===== */
+th {
+    background: #FF5733;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+/* ===== Table Row Styling ===== */
+td {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===== Availability Styles ===== */
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.not-available {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== Button Styling ===== */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ===== Delete Button ===== */
+.delete-btn {
+    background: red;
+    color: white;
+}
+
+.delete-btn:hover {
+    background: darkred;
+}
+
+/* ===== Add Menu Button ===== */
+.add-menu-btn {
+    background: #2ecc71;
+    color: white;
+    margin-top: 15px;
+}
+
+.add-menu-btn:hover {
+    background: #28a745;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    table {
+        width: 100%;
+    }
+
+    td, th {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+}

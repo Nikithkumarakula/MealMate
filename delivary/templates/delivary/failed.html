@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Failed</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'delivary/css/failed.css' %}">
+</head>
+<body>
+
+    <nav>
+        <h2>
+            <a href="{% url 'delivary:index' %}" style="text-decoration: none; color: white;">MealMate</a>
+        </h2>
+        <div class="nav-links">        
+            <a href="{% url 'delivary:sign_in' %}">Sign In</a>
+            <a href="{% url 'delivary:sign_up' %}">Sign Up</a>
+        </div>
+    </nav>
+    
+
+    <div class="failure-container">
+        <h1 class="failure-heading">Login Failure</h1>
+        <p class="failure-text">Please try again.</p>
+        <a class="retry-link" href="{% url 'delivary:sign_in' %}">Go back to Sign In</a>
+    </div>
+
+</body>
+</html>

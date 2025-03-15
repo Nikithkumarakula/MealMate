@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivary/css/cusMenu.css' %}">
+</head> 
+<body>
+
+    <!-- Navbar -->
+    <nav>
+      <h2>
+        <a href="{% url 'delivary:index' %}" style="text-decoration: none; color: white;">MealMate</a>
+    </h2>
+        <div class="nav-links">
+            <a href="{% url 'delivary:cusdisplay_res' username %}">View Restaurants</a>
+            <a href="{% url 'delivary:sign_in' %}">Sign In</a>
+            <a href="{% url 'delivary:sign_up' %}">Sign Up</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2>Menu for {{ res.res_name }}</h2>
+        <p><strong>Address:</strong> {{ res.address }}</p>
+        <p><strong>Category:</strong> {{ res.food_cat }}</p>
+        <p><strong>Rating:</strong> {{ res.rating }}</p>
+
+        <a href="{% url 'delivary:show_cart' username %}" class="cart-btn">Show Cart</a>
+
+        <table>
+            <tr>
+                <th>Item Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>Availability</th>
+                <th>Category</th>
+                <th>Actions</th>
+            </tr>
+
+            {% for item in menu %}
+            <tr>
+                <td>{{ item.item_name }}</td>
+                <td>{{ item.description }}</td>
+                <td>${{ item.price }}</td>
+                <td class="{% if item.is_available %}available{% else %}not-available{% endif %}">
+                    {% if item.is_available %}Available{% else %}Not Available{% endif %}
+                </td>
+                <td>{{ item.category }}</td>
+                <td>
+                    <form method="POST" action="{% url 'delivary:add_to_cart' item.id username %}">
+                        {% csrf_token %}
+                        <button type="submit" class="add-btn"
+                            onclick="return confirm('Are you sure you want to add this item to your cart?')">
+                            Add to Cart
+                        </button>
+                    </form>
+                </td>
+            </tr>
+            {% empty %}
+            <tr>
+                <td colspan="6">No menu items available.</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+
+</body>
+</html>

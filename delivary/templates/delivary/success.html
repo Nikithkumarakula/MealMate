@@ -1,0 +1,25 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'delivary/css/success.css' %}">
+</head>
+<body>
+
+    <div class="success-container">
+        <h1 class="success-heading">Login Successful 🎉</h1>
+        <p class="success-text">Welcome! What would you like to do next?</p>
+        
+        <div class="button-container">
+            <a class="btn" href="{% url 'delivary:add_res' %}">Add Restaurants</a>
+            <a class="btn" href="{% url 'delivary:display_res' %}">Display Restaurants</a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,45 @@
+{% extends "delivary/base.html" %}
+{% block content %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Restaurant</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'delivary/css/addres.css' %}">
+</head>
+<body>
+
+<div class="form-container">
+    
+
+    <form method="POST">
+        {% csrf_token %}
+
+        <h1>ADD RESTAURANT</h1>
+            <label for="res_name">Restaurant Name</label>
+            {{ form.res_name }}
+        
+
+            <label for="food_cat">Food Category</label>
+            {{ form.food_cat }}
+
+            <label for="rating">Rating</label>
+            {{ form.rating }}
+
+            <label for="img">Image</label>
+            {{ form.img }}
+
+            <label for="address">Address</label>
+            {{ form.address }}
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+</html>
+
+{% endblock %}

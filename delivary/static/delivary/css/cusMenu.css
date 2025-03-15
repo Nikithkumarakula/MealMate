@@ -1,0 +1,178 @@
+/* ===== General Page Styling ===== */
+body {
+    font-family: Arial, sans-serif;
+    background: url("https://t4.ftcdn.net/jpg/02/92/20/37/240_F_292203735_CSsyqyS6A4Z9Czd4Msf7qZEhoxjpzZl1.jpg") no-repeat center center/cover;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ===== Navbar Styling ===== */
+nav {
+    background-color: #333;
+    padding: 15px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav h2 {
+    color: white;
+    margin-left: 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    background-color: #555;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #777;
+}
+
+/* ===== Container Styling ===== */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* ===== Table Styling ===== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+th {
+    background: #FF5733;
+    color: white;
+    font-size: 16px;
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+td {
+    text-align: center;
+    padding: 10px;
+    font-size: 14px;
+    border-bottom: 1px solid #ddd;
+}
+
+/* ===== Availability Styles ===== */
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.not-available {
+    color: red;
+    font-weight: bold;
+}
+
+/* ===== Button Styling ===== */
+button {
+    padding: 8px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.cart-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #ffcc00;  /* Bright yellow */
+    padding: 12px 18px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cart-btn:hover {
+    background: #e6b800; /* Darker yellow */
+    transform: scale(1.05);
+    box-shadow: 2px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== Add to Cart Button ===== */
+.add-btn {
+    background: #2ecc71;
+    color: white;
+}
+
+.add-btn:hover {
+    background: #28a745;
+}
+
+/* ===== Cart Button Styling ===== */
+.cart-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    background: #ffcc00;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.cart-btn:hover {
+    background: #e6b800;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    td, th {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

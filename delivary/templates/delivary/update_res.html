@@ -1,0 +1,9 @@
+{% extends 'delivary/base.html' %}
+
+{% block content %}
+    <h2>Update Restaurant</h2>
+    <form method="POST">
+        {% csrf_token %}
+        <button type="submit">Update</button>
+    </form>
+{% endblock %}
