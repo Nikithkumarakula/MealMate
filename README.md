@@ -72,7 +72,7 @@ mealmate/
 │   │   ├── display_res.html
 │   │   ├── failed.html
 │   │   ├── index.html
-│   │   ├── menu.html
+│   │   ├── view_menu.html
 │   │   ├── orders.html
 │   │   ├── show_cart.html
 │   │   ├── sign_in.html
